@@ -15,12 +15,14 @@ import time
 #Get your app id and key here on facebook. Help here: https://goldplugins.com/documentation/wp-social-pro-documentation/how-to-get-an-app-id-and-secret-key-from-facebook/
 app_id = "YOUR NUMERIC APP ID, see above"
 app_secret = "Your app secret key, see above" # DO NOT SHARE WITH ANYONE!
-page_id = "postimees" # name of the facebook page, probably works with numbers too.
+page_id = "TheOnion" # name of the facebook page, probably works with numbers too.
 
 access_token = app_id + "|" + app_secret
 
 limited = True # limits the number of posts processed. Change to False if you want the whole page.
 limit = 200 # The number of pages to be processed if limited is True. Uses multiples of 100 to scrape for bandwith reasons.
+
+delimiter = ";" # csv delimiter
 
 def request_until_succeed(url):
     req = urllib2.Request(url)
@@ -122,7 +124,7 @@ def processFacebookPageFeedStatus(status):
 
 def scrapeFacebookPageFeedStatus(page_id, access_token):
     with open('%s_facebook_statuses.csv' % page_id, 'wb') as file:
-        w = csv.writer(file)
+        w = csv.writer(file, delimiter = delimiter)
         w.writerow(["status_id", "status_message", "link_name", "status_type", "status_link",
            "status_published", "num_reactions", "num_comments", "num_shares", "num_likes",
                     "num_loves","num_wows","num_hahas","num_sads","num_angries","num_thankfuls"])
