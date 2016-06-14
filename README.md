@@ -1,5 +1,7 @@
 # facebook-page-post-scraper
 
+**UPDATE June 2016**: Forked the script from minimaxir, the python scraper now counts each type of reaction separately. It now accesses each post by their id and gets the results from there. 14.06.2016 @peeter-t2
+
 **UPDATE April 2016**: This script now supports v2.6 of the Graph API; as a result, `reactions` are used instead of `likes`, as that endpoint is more accurate.
 
 Data scraper for Facebook Pages, and also code accompanying the blog post [How to Scrape Data From Facebook Page Posts for Statistical Analysis](http://minimaxir.com/2015/07/facebook-scraper/).
