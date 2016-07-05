@@ -15,12 +15,13 @@ import time
 #Get your app id and key here on facebook. Help here: https://goldplugins.com/documentation/wp-social-pro-documentation/how-to-get-an-app-id-and-secret-key-from-facebook/
 app_id = "YOUR NUMERIC APP ID, see above"
 app_secret = "Your app secret key, see above" # DO NOT SHARE WITH ANYONE!
-page_id = "TheOnion" # name of the facebook page, probably works with numbers too.
+page_id = "funnyordie" # name of the facebook page, probably works with numbers too.
 
 access_token = app_id + "|" + app_secret
+access_token = "EAACEdEose0cBAKyhgEa3pLlm6ZBM5slssD3342MAGhPWf0ZB4vExNrm5k7KtZC0XJuHFGZAOBlBlVqMZCD7MvkaANxAz5vi9PsAtrdjAnanhDOqtwI2N7etmf8ZASHmMWT6GZBpkK5qOTvXvZB6jzKZBWtyNBZAzd1m4VYZC1U2W9ZC9IwZDZD"
 
 limited = True # limits the number of posts processed. Change to False if you want the whole page.
-limit = 200 # The number of pages to be processed if limited is True. Uses multiples of 100 to scrape for bandwith reasons.
+limit = 100 # The number of pages to be processed if limited is True. Uses multiples of 100 to scrape for bandwith reasons.
 
 delimiter = ";" # csv delimiter
 
